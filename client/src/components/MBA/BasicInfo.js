@@ -2,13 +2,11 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import Footer from "../Footer";
+import Header from '../Header'
+
 import Nav from "./Nav";
 import { useNavigate } from "react-router-dom";
 function BasicInfo() {
-
-
-
-
     const navigate=useNavigate();
   const [stdDetails, setStdDetails] = useState({
     Salutation: "",
@@ -122,35 +120,46 @@ function BasicInfo() {
 
   return (
     <>
-      <Footer />
+     <Header />
       <Nav />
-      <div className='marg background space-y-5 py-5 px-5 mr-auto ml-auto "'>
-        <p>Salutation</p>
+    
+   
+    
+     
+      
+      <div className='  marg background space-y-5 py-5 px-5 mr-auto ml-auto flex flex-col justify-center items-center text-left  '>
+      <form className= "bg-white px-30 py-15 shadow rounded-lg sm:px-10 w-lg sm: w-2/4  ">
+      <label className="block">
+    <span className="block text-sm font-medium text-slate-700 py-2">Username</span>
+      <p >Salutation</p>
         <select
           name="Salutation"
           value={stdDetails.Salutation}
           onChange={handleStdChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
-      py-1.5
+      py- 3
+      rounded
+      shadow-sm
+      
+      focus: ring-1
       text-base
       font-normal
       text-gray-700
-      bg-transparent bg-clip-padding
-      border border-solid border-gray-600
-      rounded
+      bg-grey bg-clip-padding
+       border border-solid border-gray-600
       transition
       ease-in-out
-      m-0
+
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         >
           <option>Mr.</option>
           <option>Mrs.</option>
           <option value="2">Miss</option>
         </select>
-        <p>First Name</p>
+        <p className="pt-1.5">First Name</p>
         <input
           type="text"
           name="FirstName"
@@ -158,7 +167,7 @@ function BasicInfo() {
           onChange={handleStdChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -172,7 +181,7 @@ function BasicInfo() {
       m-0
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
-        <p>Middle Name</p>
+        <p className="pt-1.5" >Middle Name</p>
         <input
           type="text"
           name="MiddleName"
@@ -180,7 +189,7 @@ function BasicInfo() {
           onChange={handleStdChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -194,7 +203,7 @@ function BasicInfo() {
       m-0
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
-        <p>Last Name</p>
+        <p className="pt-1.5">Last Name</p>
         <input
           type="text"
           name="LastName"
@@ -202,7 +211,7 @@ function BasicInfo() {
           onChange={handleStdChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -216,7 +225,7 @@ function BasicInfo() {
       m-0
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
-        <p>Gender</p>
+        <p className="pt-1.5">Gender</p>
         <input
           type="radio"
           name="gender"
@@ -274,7 +283,7 @@ function BasicInfo() {
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
         <label for="Other">Other</label>
-        <p>Date Of Birth</p>
+        <p className="pt-1.5">Date Of Birth</p>
         <input
           type="text"
           name="DOB"
@@ -282,7 +291,7 @@ function BasicInfo() {
           onChange={handleStdChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -296,7 +305,7 @@ function BasicInfo() {
       m-0
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
-        <p>Age</p>
+        <p className="pt-1.5">Age</p>
         <input
           type="text"
           name="Age"
@@ -304,7 +313,7 @@ function BasicInfo() {
           onChange={handleStdChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -318,16 +327,16 @@ function BasicInfo() {
       m-0
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
-        <p>Photograph (jpeg, jpg, png)</p>
-        <input type="file" onChange={handlePhotoChange} />
-        <p>Are You Diffrently Abled?</p>
+        <p className="pt-1.5">Photograph (jpeg, jpg, png)</p>
+        <input type="file" className="pt-1.5" onChange={handlePhotoChange} />
+        <p className="pt-1.5">Are You Diffrently Abled?</p>
         <select
           name="Abled"
           value={stdDetails.Abled}
           onChange={handleStdChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -345,14 +354,14 @@ function BasicInfo() {
           <option>Yes</option>
           <option>No</option>
         </select>
-        <p>Category</p>
-        <select
+        <p className="pt-1.5">Category</p>
+        <select 
           name="Category"
           value={stdDetails.Category}
           onChange={handleStdChange}
-          className=" form-control
+          className=" form-control pt-1.5
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -378,9 +387,9 @@ function BasicInfo() {
           <option>SC-PWD</option>
           <option>ST-PWD</option>
         </select>
-        <p>Upload Document</p>
-        <input type="file" onChange={handleCertificateChange} />
-        <p>Adhar Card No.</p>
+        <p className="pt-1.5">Upload Document</p>
+        <input className="pt-1.5" type="file" onChange={handleCertificateChange} />
+        <p className="pt-1.5">Adhar Card No.</p>
         <input
           type="text"
           name="AadharNo"
@@ -388,7 +397,7 @@ function BasicInfo() {
           onChange={handleStdChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -403,16 +412,16 @@ function BasicInfo() {
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
         <center>
-          <h3>Guardian Details</h3>
+          <h3 className="pt-1.5 text-bold" >Guardian Details</h3>
         </center>
-        <p>Salutation</p>
+        <p className="pt-1.5">Salutation</p>
         <select
           name="Salutation"
           value={GuardianDetails.Salutation}
           onChange={handleGuardChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -430,7 +439,7 @@ function BasicInfo() {
           <option>Mrs.</option>
           <option value="2">Miss</option>
         </select>
-        <p>Name</p>
+        <p className="pt-1.5">Name</p>
         <input
           type="text"
           name="Name"
@@ -438,7 +447,7 @@ function BasicInfo() {
           onChange={handleGuardChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -452,7 +461,7 @@ function BasicInfo() {
       m-0
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
-        <p>Mobile Number</p>
+        <p className="pt-1.5">Mobile Number</p>
         <input
           type="text"
           name="MobileNumber"
@@ -460,7 +469,7 @@ function BasicInfo() {
           onChange={handleGuardChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -474,7 +483,7 @@ function BasicInfo() {
       m-0
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
-        <p>Email</p>
+        <p className="pt-1.5">Email</p>
         <input
           type="email"
           name="Email"
@@ -482,7 +491,7 @@ function BasicInfo() {
           onChange={handleGuardChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -496,7 +505,7 @@ function BasicInfo() {
       m-0
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
-        <p>Occupation</p>
+        <p className="pt-1.5">Occupation</p>
         <input
           type="text"
           name="Occupation"
@@ -504,7 +513,7 @@ function BasicInfo() {
           onChange={handleGuardChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -518,7 +527,7 @@ function BasicInfo() {
       m-0
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
-        <p>Annual Income (In Rupees)</p>
+        <p className="pt-1.5">Annual Income (In Rupees)</p>
         <input
           type="text"
           name="AnnualIncome"
@@ -526,7 +535,7 @@ function BasicInfo() {
           onChange={handleGuardChange}
           className=" form-control
       block
-      w-1/2
+      w-11/12
       px-3
       py-1.5
       text-base
@@ -541,13 +550,17 @@ function BasicInfo() {
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
         <button
-          className="mb-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+          className="mb-14 mt-5  bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
           onClick={handleSubmit}
         >
           Save & next
         </button>
+      </label>
+      </form>
       </div>
-    </>
+   
+      <Footer />
+      </>
   );
 }
 

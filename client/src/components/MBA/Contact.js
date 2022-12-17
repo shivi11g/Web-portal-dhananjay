@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer";
 import Nav from "./Nav";
+import Header from "../Header";
 function Contact() {
   let navigate = useNavigate();
 
@@ -63,13 +64,14 @@ function Contact() {
 
   return (
     <>
-      <Footer />
+      <Header />
+     
       <Nav />
       <div id="slide" className="mx-4 mb-4 background border">
-        <h1 className="text-center py-4">Contact</h1>
+        <h1 className="text-center py-4 font-bold">Contact</h1>
         <hr />
 
-        <div className="mx-4 py-4 space-y-4 ">
+        <div className="mx-4 py-4 space-y-4 flex flex-col justify-center items-center ">
           <input
             placeholder="email"
             className=" form-control
@@ -507,21 +509,22 @@ function Contact() {
             onChange={handleChange}
           ></textarea>
         </div>
-        <div className="buttons flex justify-end  text-white mb-10">
-          <button
-            className="mx-4 mb-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+        <div className=" flex flex-col justify-center items-center buttons   text-white mb-10">
+         <button
+            className=" display-inline mx-4 mb-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded "
             onClick={handleUpdate}
           >
             update
-          </button>
-          <button
-            className=" mb-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+          </button> 
+         <button
+            className=" mb-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded mx-3"
             onClick={handleCreate}
           >
             Save&next
           </button>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer";
+import Header from "../Header";
 import Nav from "./Nav";
 function AcademicRewards() {
   const navigate = useNavigate();
@@ -37,13 +38,14 @@ function AcademicRewards() {
 
   return (
     <>
-      <Footer />
+    <Header />
+   
       <Nav />
-      <div className=" mx-4  background border">
-        <h1 className="text-center">Academics Rewards</h1>
-        <table className="mr-auto ml-auto">
-          <tr>
-            <td>
+      <div id="slide" className="mx-4 mb-10 pt-2 pb-10 bg-white px-30 py-15 shadow rounded-lg background border mt-4">
+        <h1 className="text-center font-bold">Academics Rewards</h1>
+        <table className=" mt-7 mr-auto ml-auto">
+          <tr className="mb-2">
+            <td >
               <label for="Reward Description">Reward Description</label>
             </td>
             <td>
@@ -54,9 +56,12 @@ function AcademicRewards() {
                 placeholder="Reward Description"
                 className=" form-control
       block
+  
       w-1/2
       px-3
       py-1.5
+      mb-2
+      ml-4
       text-base
       font-normal
       text-gray-700
@@ -82,8 +87,10 @@ function AcademicRewards() {
                 className=" form-control
       block
       w-1/2
+      mb-2
       px-3
       py-1.5
+      ml-4
       text-base
       font-normal
       text-gray-700
@@ -98,7 +105,7 @@ function AcademicRewards() {
               />
             </td>
           </tr>
-          <tr>
+          <tr className="mb-2">
             <td>
               <label for="Year Received">Year Received</label>
             </td>
@@ -111,8 +118,10 @@ function AcademicRewards() {
                 className=" form-control
       block
       w-1/2
+      mb-2
       px-3
       py-1.5
+      ml-4
       text-base
       font-normal
       text-gray-700
@@ -127,14 +136,16 @@ function AcademicRewards() {
               />
             </td>
           </tr>
-          <button
-            className="mb-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded sm:w-40"
+          
+        </table>
+       <center> <button
+            className="mb-0 mt-7 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded sm:w-40"
             onClick={handleClick}
           >
             Save & Next
-          </button>
-        </table>
+          </button> </center>
       </div>
+      <Footer />
     </>
   );
 }

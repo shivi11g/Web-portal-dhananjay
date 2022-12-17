@@ -19,7 +19,7 @@ function App() {
       <Route path="/" element={<Login/>}/>
 
       <Route element={<PrivateComponent/>}>
-      <Route path='/mba' element={<Template/>}/>
+      <Route path='/mba' element={<Template />}/>
       <Route path='/mba/test-score' element={<TestScore/>}/>
       <Route path='/mba/education' element={<Education/>}/>
       <Route path='/mba/contact'  element={<Contact/>}/>

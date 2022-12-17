@@ -3,6 +3,7 @@ import { useState } from "react";
 import Footer from "../Footer";
 import Nav from "./Nav";
 import axios from "axios";
+import Header from "../Header";
 import { useNavigate } from "react-router-dom";
 function Education() {
 
@@ -268,16 +269,17 @@ function Education() {
 
   return (
     <>
-      <Footer />
+      <Header />
       <Nav />
-
+      <div id="slide" className="mx-4 mb-4 background border pt-2 mt-4">
       <div className=" mx-4 background space-y-10 py-5 px-5">
-        <hr />
-        <center>Secondary Education</center>
-        <table className="mr-auto ml-auto ">
+        {/* <hr /> */}
+        <div id="slide" className="mx-4 mb-4 pt-2 pb-10 bg-white px-30 py-15 shadow rounded-lg background border mt-4">
+       <p className="text-black text-lg uppercase font-sans font-medium"> <center>Secondary Education</center></p>
+        <table className=" mt-5 ml-auto mr-auto">
           <tr>
             <td>
-              <label class="form-control-label">Type</label>
+              <label class="form-control-label py-3">Type</label>
             </td>
             <td>
               <select
@@ -289,6 +291,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -307,7 +310,7 @@ function Education() {
             </td>
 
             <td>
-              <label for="name">School/Institute Name</label>
+              <label for="name" className="mr-3">School/Institute Name</label>
             </td>
             <td>
               <input
@@ -320,6 +323,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -348,6 +352,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -374,6 +379,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -457,6 +463,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -484,6 +491,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -510,10 +518,16 @@ function Education() {
             </td>
           </tr>
         </table>
+        </div>
+        <div id="slide" className="mx-4 mb-4 pt-2 pb-10 bg-white px-30 py-15 shadow rounded-lg background border mt-4">
         <center>
-          <h3>HIGHER SECONDARY</h3>
+        
+        {/* </div> */}
+        
+       
+        <p className="text-black text-lg uppercase font-sans font-medium">HIGHER SECONDARY</p>
         </center>
-        <table className="mr-auto ml-auto">
+        <table className="mt-5 mr-auto ml-auto">
           <tr>
             <td>
               <label class="form-control-label">Type</label>
@@ -528,6 +542,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -545,7 +560,7 @@ function Education() {
               </select>
             </td>
             <td>
-              <label for="name">School/Institute Name</label>
+              <label for="name" className="mr-3">School/Institute Name</label>
             </td>
             <td>
               <input
@@ -558,6 +573,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -586,6 +602,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -612,6 +629,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -695,6 +713,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -722,6 +741,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -748,10 +768,13 @@ function Education() {
             </td>
           </tr>
         </table>
+        </div>
+        
+        <div id="slide" className="mx-4 mb-4 pt-2 pb-10 bg-white px-30 py-15 shadow rounded-lg background border mt-4">
         <center>
-          <h3>BACHLOR'S</h3>
+        <p className="text-black text-lg uppercase font-sans font-medium">BACHLOR'S</p>
         </center>
-        <table className="mr-auto ml-auto">
+        <table className=" mr-auto mt-3 ml-auto">
           <tr>
             <td>
               <label for="name">Degree</label>
@@ -766,6 +789,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -824,6 +848,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -854,6 +879,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -883,6 +909,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -965,6 +992,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1053,6 +1081,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1079,6 +1108,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1105,10 +1135,16 @@ function Education() {
             </td>
           </tr>
         </table>
+        </div>
+      
+    
+       
+        <div id="slide" className="mx-4 mb-4 pt-2 pb-10 bg-white px-30 py-15 shadow rounded-lg background border mt-4">
         <center>
-          <h3>MASTERS</h3>
+       
+        <p className="text-black text-lg uppercase font-sans font-medium">MASTERS</p>
         </center>
-        <table className="mr-auto ml-auto">
+        <table className="mr-auto mt-3 ml-auto">
           <tr>
             <td>
               <label for="name">Degree</label>
@@ -1123,6 +1159,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1190,6 +1227,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1220,6 +1258,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1249,6 +1288,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1331,6 +1371,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1420,6 +1461,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1446,6 +1488,7 @@ function Education() {
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1472,10 +1515,13 @@ function Education() {
             </td>
           </tr>
         </table>
+        </div>
+        
+        <div id="slide" className="mx-4 mb-4 pt-2 pb-10 bg-white px-30 py-15 shadow rounded-lg background border mt-4">
         <center>
-          <h3>DIPLOMA</h3>
+        <p className="text-black text-lg uppercase font-sans font-medium">DIPLOMA</p>
         </center>
-        <table className="mr-auto ml-auto">
+        <table className="mr-auto mt-3 ml-auto">
           <tr>
             <td>
               <label for="name">Diploma Type</label>
@@ -1486,10 +1532,11 @@ function Education() {
                 value={DiplomaEdu.DiplomaType}
                 onChange={handleDiplomaChange}
                 className=" form-control
-      block
+                block
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1506,34 +1553,6 @@ function Education() {
                 <option value="Part Time">Part Time</option>
               </select>
             </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="name">Board</label>
-            </td>
-            <td>
-              <input
-                type="text"
-                name="Board"
-                value={DiplomaEdu.Board}
-                onChange={handleDiplomaChange}
-                className=" form-control
-      block
-      w-1/2
-      px-3
-      py-1.5
-      text-base
-      font-normal
-      text-gray-700
-      bg-transparent bg-clip-padding
-      border border-solid border-gray-600
-      rounded
-      transition
-      ease-in-out
-      m-0
-      focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
-              />
-            </td>
             <td>
               <label for="name">Passing Year</label>
             </td>
@@ -1543,10 +1562,11 @@ function Education() {
                 value={DiplomaEdu.PassingYear}
                 onChange={handleDiplomaChange}
                 className=" form-control
-      block
+                block
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1622,6 +1642,47 @@ function Education() {
           </tr>
           <tr>
             <td>
+              <label for="name">Board</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="Board"
+                value={DiplomaEdu.Board}
+                onChange={handleDiplomaChange}
+                className=" form-control
+                block
+      w-1/2
+      px-3
+      py-1.5
+      mb-1
+      text-base
+      font-normal
+      text-gray-700
+      bg-transparent bg-clip-padding
+      border border-solid border-gray-600
+      rounded
+      transition
+      ease-in-out
+      m-0
+      focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
+              />
+            </td>
+            <td>
+              <label for="name">Upload Marksheet</label>
+            </td>
+            <td>
+              <input
+                type="file"
+                name="DiplomaMarksheet"
+                onChange={handleDiplomaFileChange}
+              />
+            </td>
+            
+    
+          </tr>
+          <tr>
+            <td>
               <label for="name">Result(% or CGPA)</label>
             </td>
             <td>
@@ -1631,10 +1692,11 @@ function Education() {
                 value={DiplomaEdu.Result}
                 onChange={handleDiplomaChange}
                 className=" form-control
-      block
+                block
       w-1/2
       px-3
       py-1.5
+      mb-1
       text-base
       font-normal
       text-gray-700
@@ -1648,27 +1710,22 @@ function Education() {
               />
             </td>
 
-            <td>
-              <label for="name">Upload Marksheet</label>
-            </td>
-            <td>
-              <input
-                type="file"
-                name="DiplomaMarksheet"
-                onChange={handleDiplomaFileChange}
-              />
-            </td>
+            
           </tr>
         </table>
+        </div>
+      
         <br />
-        <button
-          className="mb-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+       <center> <button
+          className=" mb-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
           onClick={handleSubmit}
         >
           Save & next
-        </button>
+        </button></center>
+      </div>
       </div>
       <hr />
+      <Footer/>
     </>
   );
 }

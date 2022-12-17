@@ -3,6 +3,7 @@ import axios from "axios";
 import Footer from "../Footer";
 import Nav from "./Nav";
 import { useNavigate } from "react-router-dom";
+import Header from "../Header";
 function AdditionalInfo() {
   const navigate = useNavigate();
   const [info, setInfo] = useState({
@@ -65,10 +66,10 @@ function AdditionalInfo() {
 
   return (
     <>
-      <Footer />
+      <Header />
       <Nav />
-      <div className=" mx-4  background border space-y-4 px-4">
-        <p>Video CV</p>
+      <div id="slide" className=" flex flex-col justify-center items-center mx-4 mb-4 pt-2 pb-10 bg-white px-30 py-15 shadow rounded-lg background border mt-4">
+        <p className="my-3">Video CV</p>
         <input
           type="text"
           name="VideoCV"
@@ -92,7 +93,7 @@ function AdditionalInfo() {
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
 
-        <p>Linkedin</p>
+        <p className="my-3">Linkedin</p>
         <input
           type="text"
           name="Linkedin"
@@ -115,17 +116,19 @@ function AdditionalInfo() {
       m-0
       focus:text-gray-700 focus:bg-transparent focus:border-blue-600 focus:outline-none"
         />
-
-        <p>Resume (docx,doc,pdf)*</p>
+       <div className="w-1/2">
+        <p className="mt-2 text-left mb-2">Resume (docx,doc,pdf)*</p>
         <input type="file" onChange={handleResumeChange} />
 
-        <button
-          className="block mb-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded "
+       <center> <button
+          className="block mb-0 mt-9 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded "
           onClick={handleClick}
         >
           Save & Next
-        </button>
+        </button> </center>
       </div>
+      </div>
+      <Footer />
     </>
   );
 }

@@ -3,6 +3,7 @@ import Footer from "../Footer";
 import Nav from "./Nav";
 import axios from "axios";
 import { Navigate, useNavigate } from "react-router-dom";
+import Header from "../Header";
 function TestScore() {
   const navigate = useNavigate();
   const [testScore, setTestScore] = useState({
@@ -67,12 +68,13 @@ function TestScore() {
 
   return (
     <>
-      <Footer />
+       <Header />
+      
       <Nav />
-      <div id="slide" className=" mx-4  background border">
-        <h1 className="text-center py-4">Test-Score</h1>
+      <div id="slide" className="mx-4 my-20 pt-2 pb-10 bg-white px-30 py-15 shadow rounded-lg background border mt-4">
+        <h1 className="text-center py-4 font-bold">Test-Score</h1>
 
-        <table className=" mr-auto ml-auto">
+        <table className=" mt-6 mr-auto ml-auto">
           <tr>
             <td>
               <label for="name">Exam Name</label>
@@ -264,14 +266,16 @@ function TestScore() {
           </tr>
           {/* <button className="mb-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={handleClick}>Save&next</button> */}
 
-          <button
+          
+        </table>
+        <center><button
             onClick={onSubmit}
-            className="mb-4 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+            className="mb-0 mt-10 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
           >
             Upload
-          </button>
-        </table>
+          </button></center>
       </div>
+      <Footer />
     </>
   );
 }

@@ -17,7 +17,7 @@ const BasicInfo = require("./modules/mba-modules/basicInfo");
 const AdditionalInfo = require("./modules/mba-modules/additionalInfo");
 const app = express();
 app.use(fileUpload());
-app.use(cors());
+app.use(cors({origin: "*",}));
 app.use(express.json());
 
 let folderName;
@@ -433,3 +433,19 @@ app.post("/mba/uploads/additionalInfo", async (req, res) => {
 });
 
 app.listen(5000);
+// export default defineConfig({
+//   plugins: [react() tsconfigPaths()],
+//   server: {
+//     port: 8000
+//   }
+// });
+// fetch('localhost:3000/users')
+//     .then(response => {
+//       if (!response.ok) {
+//         throw new Error(response.statusText)
+//       }
+//       return response.json()
+//     }).catch(err=>{
+//     console.log(err)
+// })
+

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import cryptoRandomString from "crypto-random-string";
+// import cryptoRandomString from "crypto-random-string";
+
 import "./style.css";
 function Login() {
   const navigate = useNavigate();
@@ -49,11 +50,14 @@ function Login() {
   };
 
   const Registration = async () => {
+    const arr = new Uint32Array(1);
+    window.crypto.getRandomValues(arr)
     let result = await fetch("http://localhost:5000/register", {
       method: "post",
       body: JSON.stringify({
         ...signUp,
-        id: cryptoRandomString({ length: 10 }),
+        // id: cryptoRandomString({ length: 10 }),
+        id: arr[0]
       }),
       headers: {
         "content-Type": "application/json",
