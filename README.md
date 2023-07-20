@@ -2,8 +2,13 @@
 This is the Web Portal for PG Admission for our college.
 
 run `npm install`  
-run `npm start` in frontend folder  
-run `nodemon index.js` in backend folder 
+In client folder
+run `npm i`
+run `npm start`
+In Server folder
+run `npm i`
+run `nodemon index.js`
+
 
 
 ![Screenshot 2023-07-20 123325](https://github.com/shivi11g/Web-portal-dhananjay/assets/99272893/5deacaac-0f8f-45c2-bf22-188304d2673f)
